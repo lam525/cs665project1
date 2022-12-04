@@ -13,26 +13,26 @@ VALUES
 INSERT INTO Movie (MovieName, director, starring, genre)
 VALUES 
     (Violent Night,Tommy, John, Comedy),
-    (),
-    (),
-    (),
-    ();
+    (Strange World, Don Hall,Nik, Animation),
+    (Black Panther: Wakanda Forever, Ryan, Letitia Wright, Action),
+    (The Menu, Mark, Anya Taylor-Joy, Horror/Comedy),
+    (Devotion,J. D. Dillard, Glen Powell, Action);
 
 INSERT INTO Ticket(MovieName, CinemaName, datetime, price)
 VALUES 
     (Violent Night, West IMAX, 2022-12-09 15:45:21, 15),
-    (),
-    (),
-    (),
-    ();
+    (Strange World,Center IMAX,2022-12-06 14:30:10,15 ),
+    (Black Panther: Wakanda Forever, West IMAX,2022-12-05 22:55:21,20),
+    (The Menu,Center IMAX,2022-12-07 13:25:00, 10 ),
+    (Devotion, Center IMAX,2022-12-08 23:25:00,15 );
 
 
 INSERT INTO Projection(MovieName, datetime, roomNumber,seat)
 VALUES 
     (Violent Night, West IMAX,2022-12-09 15:45:21, 17, 6J),
-    (),
-    (),
-    (),
-    ();
-
+    (Strange World,Center IMAX,2022-12-06 14:30:10, 6, 3K ),
+    (Black Panther: Wakanda Forever, West IMAX,2022-12-05 22:55:21,5, 9H),
+    (The Menu,Center IMAX,2022-12-07 13:25:00, 3, 8J ),
+    (Devotion, Center IMAX,2022-12-08 23:25:00,11, 5F );
+   
 
