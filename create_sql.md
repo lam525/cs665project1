@@ -23,13 +23,21 @@ CREATE TABLE Ticket (
         CinemaNamee VARCHAR(20), 
         datetime DATETIME, 
         price DECIMAL(10,2)
-        PRIMARY KEY (MovieName, CinemaName, datetime)
+        PRIMARY KEY (MovieName, CinemaName, datetime),
+        FOREIGN KEY (MovieName) REFERENCES Movie(MovieName)
+        ON DELETE CASCADE,
+        FOREIGN KEY (CinemaName)) REFERENCES Cinema(CinemaName) 
+        ON UPDATE CASCADE
 );
 
 CREATE TABLE Projection (
         MovieName VARCHAR(50), 
-        CinemaNamee VARCHAR(20), 
+        CinemaName VARCHAR(20), 
         datetime DATETIME, 
+        roomNumber INT,
         seat VARCHAR(5),
-        PRIMARY KEY (MovieName, CinemaName,datetime)
+        PRIMARY KEY (MovieName, CinemaName,datetime, roomNumber),
+        FOREIGN KEY (MovieName) REFERENCES Movie(MovieName),
+        FOREIGN KEY (CinemaName)) REFERENCES Cinema(CinemaName),
+        FOREIGN KEY (datetime) REFERENCES Ticket(datetime),
 );
